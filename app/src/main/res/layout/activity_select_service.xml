@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#80FF84"
+    android:layout_height="match_parent"
+    tools:context=".selectService">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_round"
+        android:textColor="#fff"
+        android:text="continue"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:id="@+id/btn_continue"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHOOSE YOUR SERVICE"
+        android:textColor="#000"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/basiccarwash"
+                android:text="Basic Wash"
+                android:textColor="#fff"
+                android:id="@+id/basic_wash"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="premium Wash"
+                android:textColor="#fff"
+                android:background="@drawable/premiumwash"
+                android:id="@+id/premium_wash"
+                />
+
+            <Button
+                android:id="@+id/paint_protection"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/paintprotection"
+                android:text="Paint Protection Coating"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/internalcleaning"
+                android:text="Internal Cleaning"
+                android:textColor="#fff"
+
+                android:id="@+id/internal_cleaning"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="superb rubbing and glaze"
+                android:textColor="#fff"
+                android:background="@drawable/rubbingglaze"
+                android:id="@+id/rubbing_glaze"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="A.C Sanitization"
+                android:textColor="#fff"
+                android:background="@drawable/acsanitization"
+                android:id="@+id/ac_sanitization"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="engine coating"
+                android:textColor="#fff"
+                android:background="@drawable/enginecoating"
+                android:id="@+id/engine_coating"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="alloy wheel treatment"
+                android:textColor="#fff"
+                android:background="@drawable/alloywheel"
+                android:id="@+id/alloy_wheel"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="upholstery correction"
+                android:textColor="#fff"
+                android:background="@drawable/seattreatment"
+                android:id="@+id/seat_treatment"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:text="headlight restoration"
+                android:textColor="#fff"
+                android:background="@drawable/headlight"
+                android:id="@+id/headlight_restoration"/>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHOOSE YOUR SERVICE"
+        android:textColor="#000"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+
+</LinearLayout>
