@@ -17,6 +17,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.sql.Time;
 import java.util.Calendar;
@@ -67,19 +68,35 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
         btn_proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Str_Name = edt_name.getText().toString().trim();
                 Str_Phone = edt_phone.getText().toString().trim();
                 Str_Email = edt_email.getText().toString().trim();
                 Str_Address = edt_address.getText().toString().trim();
 
-                GlobalClass global = (GlobalClass)getApplication();
+                if(Str_Name.isEmpty() == true ||Str_Phone.isEmpty() == true ||Str_Email.isEmpty() == true ||Str_Address.isEmpty() == true ||Str_Date.isEmpty() == true ||Str_Time.isEmpty() == true){
+                    Toast.makeText(UserDetails.this, "Please fill all the details before proceeding", Toast.LENGTH_SHORT).show();
+                }else {
 
-                global.setName(Str_Name);
-                global.setName(Str_Phone);
-                global.setName(Str_Email);
-                global.setName(Str_Address);
-                global.setName(Str_Date);
-                global.setName(Str_Time);
+                    GlobalClass global = (GlobalClass) getApplication();
+
+                    global.setName(Str_Name);
+                    global.setPhone(Str_Phone);
+                    global.setEmail(Str_Email);
+                    global.setAddress(Str_Address);
+                    global.setDate(Str_Date);
+                    global.setTime(Str_Time);
+
+
+
+                    String phoneNumber = "+91" + Str_Phone;
+
+                    Intent intent = new Intent(UserDetails.this, VerifyNumber.class);
+                    intent.putExtra("phonenumber", phoneNumber);
+                    Toast.makeText(UserDetails.this, "number entered : "+phoneNumber, Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+                }
+
 
             }
         });

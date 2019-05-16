@@ -28,4 +28,14 @@ dependencies {
     implementation 'com.google.android.gms:play-services-places:7.3.0'
     implementation 'com.google.android.libraries.places:places-compat:1.1.0'
     implementation 'com.github.MdFarhanRaja:SearchableSpinner:1.2'
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-database:17.0.0'
+    implementation 'com.google.firebase:firebase-crash:16.2.1'
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.firebase:firebase-client-android:2.5.0'
+    implementation 'com.firebaseui:firebase-ui:0.3.1'
+
+
 }
+apply plugin: 'com.google.gms.google-services'

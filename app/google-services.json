@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "150748883719",
+    "firebase_url": "https://superb-e3083.firebaseio.com",
+    "project_id": "superb-e3083",
+    "storage_bucket": "superb-e3083.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150748883719:android:f87b6ab875cff499",
+        "android_client_info": {
+          "package_name": "com.example.superb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150748883719-ji2nu5q3d18s8dv0ffq756gc3b4kq4cn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.superb",
+            "certificate_hash": "e8791e84ab1c905bf0f3a38396fbc83cb737ad5d"
+          }
+        },
+        {
+          "client_id": "150748883719-9mie9our09021jsqt6qt11oaamijqkgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLZTRx2qtJnsiErGrp0hcC1nQcgXGfpb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150748883719-9mie9our09021jsqt6qt11oaamijqkgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
