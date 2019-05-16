@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,35 +8,18 @@
     android:layout_height="match_parent"
     tools:context=".selectModel">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/selected"
         android:src="@drawable/superbcarwash_logo"
         />
 
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_round"
-            android:textColor="#fff"
-            android:text="SEARCH YOUR CAR"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:id="@+id/btn_search"/>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -44,6 +27,8 @@
         android:gravity="center"
         android:layout_margin="10dp"
         android:text="Selected Vehicle :"
+        android:layout_above="@id/txt_selectedCar"
+        android:id="@+id/selected"
         android:textColor="#000" />
 
     <TextView
@@ -51,13 +36,28 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="#000"
+        android:layout_above="@+id/btn_search"
         android:layout_margin="10dp"
         android:id="@+id/txt_selectedCar"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_round"
+        android:textColor="#fff"
+        android:text="SEARCH YOUR CAR"
+        android:gravity="center"
+        android:layout_above="@+id/btn_continue"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:id="@+id/btn_search"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="CONTINUE"
+        android:layout_alignParentBottom="true"
         android:gravity="center"
         android:textColor="#fff"
         android:layout_margin="10dp"
@@ -65,9 +65,7 @@
         android:id="@+id/btn_continue"
         android:layout_gravity="center"/>
 
-        </LinearLayout>
-
-    </ScrollView>
 
 
-</LinearLayout>
+
+</RelativeLayout>

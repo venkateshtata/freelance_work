@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#80FF84"
+    android:background="#80C6FF"
     android:layout_height="match_parent"
     tools:context=".selectService">
 
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/button_round"
-        android:textColor="#fff"
-        android:text="continue"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:padding="10dp"
-        android:id="@+id/btn_continue"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CHOOSE YOUR SERVICE"
+        android:layout_alignParentTop="true"
+        android:id="@+id/heading"
         android:textColor="#000"
         android:layout_margin="10dp"
         android:textSize="20dp"
@@ -37,13 +26,18 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_above="@+id/btn_continue"
         android:layout_margin="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+
+
 
 
 
@@ -143,27 +137,19 @@
                 android:background="@drawable/headlight"
                 android:id="@+id/headlight_restoration"/>
 
-
-
-
-
-
-
-
-
-
         </LinearLayout>
     </ScrollView>
-
-    <TextView
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CHOOSE YOUR SERVICE"
-        android:textColor="#000"
+        android:background="@drawable/button_round"
         android:layout_margin="10dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:gravity="center" />
+        android:textColor="#fff"
+        android:text="continue"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/btn_continue"/>
 
 
-</LinearLayout>
+
+</RelativeLayout>

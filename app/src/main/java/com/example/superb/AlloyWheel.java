@@ -12,11 +12,13 @@ import android.widget.Toast;
 public class AlloyWheel extends AppCompatActivity {
 
 
-    TextView head, description;
+    TextView head, description, price;
 
     Typeface myFont;
 
     Button back, add;
+
+    int service_charge = 0;
 
 
     @Override
@@ -31,6 +33,27 @@ public class AlloyWheel extends AppCompatActivity {
         back = (Button)findViewById(R.id.back);
         add = (Button)findViewById(R.id.add);
 
+        price = (TextView)findViewById(R.id.price);
+
+
+        GlobalClass global_for_car = (GlobalClass)getApplication();
+        String selected_car = global_for_car.getSelectedCar();
+
+        if(selected_car.contains("Premium")){
+            service_charge = 1250;
+
+        }else if(selected_car.contains("MUV")){
+            service_charge = 800;
+        }else if(selected_car.contains("SUV")){
+            service_charge = 800;
+        }else if(selected_car.contains("Sedan")){
+            service_charge = 800;
+        }else if(selected_car.contains("Hatchback")){
+            service_charge = 700;
+        }
+
+        price.setText("Price : "+service_charge);
+
 
         myFont = Typeface.createFromAsset(this.getAssets(),"fonts/proxima.ttf");
 
@@ -43,6 +66,15 @@ public class AlloyWheel extends AppCompatActivity {
                 "-Only regular washing needed after Protection\n" +
                 "-No need for expensive alloy wheel cleaners\n" +
                 "-No cracking or scaling off of the Alloy coating.\n");
+
+
+        GlobalClass global = (GlobalClass)getApplication();
+        if(global.getAlloywheel()==1){
+
+            add.setText("remove");
+
+        }
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,12 +89,26 @@ public class AlloyWheel extends AppCompatActivity {
             public void onClick(View v) {
 
                 GlobalClass global = (GlobalClass)getApplication();
+                if(global.getAlloywheel()==1){
 
-                global.setAlloywheel(1);
 
-                Toast.makeText(AlloyWheel.this, "Alloy Wheel Treatment added !", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AlloyWheel.this, selectService.class);
-                startActivity(intent);
+                    global.setAlloywheel(0);
+                    global.subFromTotal(service_charge);
+
+                    Toast.makeText(AlloyWheel.this, "Alloy Wheel Treatment removed !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AlloyWheel.this, selectService.class);
+                    startActivity(intent);
+                }else{
+
+
+                    global.setAlloywheel(1);
+                    global.addToTotal(service_charge);
+
+                    Toast.makeText(AlloyWheel.this, "Alloy Wheel Treatment added !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AlloyWheel.this, selectService.class);
+                    startActivity(intent);
+                }
+
 
 
             }

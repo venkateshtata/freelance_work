@@ -12,11 +12,13 @@ import android.widget.Toast;
 public class EngineCoating extends AppCompatActivity {
 
 
-    TextView head, description;
+    TextView head, description, price;
 
     Typeface myFont;
 
     Button back, add;
+
+    int service_charge = 0;
 
 
     @Override
@@ -30,6 +32,27 @@ public class EngineCoating extends AppCompatActivity {
         back = (Button)findViewById(R.id.back);
         add = (Button)findViewById(R.id.add);
 
+        price = (TextView)findViewById(R.id.price);
+
+
+        GlobalClass global_for_car = (GlobalClass)getApplication();
+        String selected_car = global_for_car.getSelectedCar();
+
+        if(selected_car.contains("Premium")){
+            service_charge = 1000;
+
+        }else if(selected_car.contains("MUV")){
+            service_charge = 700;
+        }else if(selected_car.contains("SUV")){
+            service_charge = 700;
+        }else if(selected_car.contains("Sedan")){
+            service_charge = 600;
+        }else if(selected_car.contains("Hatchback")){
+            service_charge = 500;
+        }
+
+        price.setText("Price : "+service_charge);
+
 
         myFont = Typeface.createFromAsset(this.getAssets(),"fonts/proxima.ttf");
 
@@ -41,6 +64,14 @@ public class EngineCoating extends AppCompatActivity {
                 "Excellent resistance to:\n" +
                 "\n" +
                 "Petrol/Diesel+ Engine Oil + High Pressure water + Road grime + Avoids corrosion + Can be washed easily + Does not blister, crack, peel or yellow.\n");
+
+
+        GlobalClass global = (GlobalClass)getApplication();
+        if(global.getEnginecoating()==1){
+
+            add.setText("remove");
+
+        }
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,13 +85,29 @@ public class EngineCoating extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+
                 GlobalClass global = (GlobalClass)getApplication();
+                if(global.getEnginecoating()==1){
 
-                global.setEnginecoating(1);
 
-                Toast.makeText(EngineCoating.this, "Engine Coating added !", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(EngineCoating.this, selectService.class);
-                startActivity(intent);
+                    global.setEnginecoating(0);
+                    global.subFromTotal(service_charge);
+
+                    Toast.makeText(EngineCoating.this, "Engine Coating removed !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(EngineCoating.this, selectService.class);
+                    startActivity(intent);
+                }else{
+
+
+                    global.setEnginecoating(1);
+                    global.addToTotal(service_charge);
+
+                    Toast.makeText(EngineCoating.this, "Engine Coating added !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(EngineCoating.this, selectService.class);
+                    startActivity(intent);
+                }
+
 
 
             }

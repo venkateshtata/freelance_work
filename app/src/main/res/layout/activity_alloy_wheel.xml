@@ -35,6 +35,16 @@
                 android:textColor="#000"
                 android:id="@+id/description"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/price"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#1766A6"/>
+
         </LinearLayout>
     </ScrollView>
 

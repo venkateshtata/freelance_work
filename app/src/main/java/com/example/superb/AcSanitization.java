@@ -12,11 +12,13 @@ import android.widget.Toast;
 public class AcSanitization extends AppCompatActivity {
 
 
-    TextView head, description;
+    TextView head, description, price;
 
     Typeface myFont;
 
     Button back, add;
+
+    int service_charge = 0;
 
 
     @Override
@@ -31,6 +33,27 @@ public class AcSanitization extends AppCompatActivity {
         back = (Button)findViewById(R.id.back);
         add = (Button)findViewById(R.id.add);
 
+        price = (TextView)findViewById(R.id.price);
+
+
+        GlobalClass global_for_car = (GlobalClass)getApplication();
+        String selected_car = global_for_car.getSelectedCar();
+
+        if(selected_car.contains("Premium")){
+            service_charge = 800;
+
+        }else if(selected_car.contains("MUV")){
+            service_charge = 600;
+        }else if(selected_car.contains("SUV")){
+            service_charge = 600;
+        }else if(selected_car.contains("Sedan")){
+            service_charge = 500;
+        }else if(selected_car.contains("Hatchback")){
+            service_charge = 500;
+        }
+
+        price.setText("Price : "+service_charge);
+
 
         myFont = Typeface.createFromAsset(this.getAssets(),"fonts/proxima.ttf");
 
@@ -41,6 +64,14 @@ public class AcSanitization extends AppCompatActivity {
                 "Cleans the Air conditioner coils and ducts \n" +
                 "Disinfects the ducts and helps to stop build up of mould Removes all bad and foul odors from the ducts\n" +
                 "Improves in-car air quality for the well being of driver and passengers.\n");
+
+
+        GlobalClass global = (GlobalClass)getApplication();
+        if(global.getAcsanitization()==1){
+
+            add.setText("remove");
+
+        }
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,12 +86,25 @@ public class AcSanitization extends AppCompatActivity {
             public void onClick(View v) {
 
                 GlobalClass global = (GlobalClass)getApplication();
+                if(global.getAcsanitization()==1){
 
-                global.setAcsanitization(1);
 
-                Toast.makeText(AcSanitization.this, "A.C Sanitization added !", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AcSanitization.this, selectService.class);
-                startActivity(intent);
+                    global.setAcsanitization(0);
+                    global.subFromTotal(service_charge);
+
+                    Toast.makeText(AcSanitization.this, "A.C Sanitization removed !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AcSanitization.this, selectService.class);
+                    startActivity(intent);
+                }else{
+
+
+                    global.setAcsanitization(1);
+                    global.addToTotal(service_charge);
+
+                    Toast.makeText(AcSanitization.this, "A.C Sanitization added !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AcSanitization.this, selectService.class);
+                    startActivity(intent);
+                }
 
 
             }

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/name_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/name1"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    android:layout_toRightOf="@+id/name_icon"
+                    android:layout_margin="5dp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:textColorHint="#000"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/phone_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/phone1"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/edt_phone"
+                    android:layout_toRightOf="@+id/phone_icon"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:textColorHint="#000"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/email_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/email1"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_toRightOf="@+id/email_icon"
+                    android:layout_margin="5dp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColorHint="#000"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/address_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/address1"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    android:layout_toRightOf="@+id/address_icon"
+                    android:layout_margin="5dp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    android:textColorHint="#000"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/date_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/date1"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_toRightOf="@+id/date_icon"
+                    android:layout_margin="5dp"
+                    android:textSize="25dp"
+                    android:textColor="#000"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Set Date"
+                    android:textColorHint="#000"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/time_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/time1"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_toRightOf="@+id/time_icon"
+                    android:layout_margin="5dp"
+                    android:textSize="25dp"
+                    android:textColor="#000"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Set Time"
+                    android:textColorHint="#000"/>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="re-select"
+            android:textColor="#fff"
+            android:id="@+id/btn_back"
+            android:background="@drawable/button_round"
+            android:layout_margin="5dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:id="@+id/btn_proceed"
+            android:background="@drawable/button_round_pink"
+            android:layout_margin="5dp"
+            android:text="proceed"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

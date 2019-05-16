@@ -54,7 +54,12 @@ public class selectModel extends AppCompatActivity {
 
                 car_selected = item;
 
+                GlobalClass global = (GlobalClass)getApplication();
+
+                global.setSelectedCar(car_selected);
+
                 txt_selectedCar.setText(car_selected);
+
 
             }
         });

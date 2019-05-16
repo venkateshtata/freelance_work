@@ -1,11 +1,16 @@
 package com.example.superb;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class selectService extends AppCompatActivity {
 
@@ -13,10 +18,20 @@ public class selectService extends AppCompatActivity {
 
     Button btn_continue;
 
+    TextView heading;
+
+    Typeface myFont;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_service);
+
+        heading = (TextView)findViewById(R.id.heading);
+
+        myFont = Typeface.createFromAsset(this.getAssets(),"fonts/proxima.ttf");
+
+        heading.setTypeface(myFont);
 
 
         basic_carwash = (Button)findViewById(R.id.basic_wash);
@@ -43,6 +58,9 @@ public class selectService extends AppCompatActivity {
 
                 GlobalClass global = (GlobalClass)getApplication();
 
+
+
+
                 final int basicwash = global.getBasicwash();
                 final int premiumwash = global.getPremiumwash();
                 final int internalwash = global.getInternalcleaning();
@@ -58,7 +76,8 @@ public class selectService extends AppCompatActivity {
                     Toast.makeText(selectService.this, "Select a service", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(selectService.this, "Thank you !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(selectService.this, ServicesSummary.class);
+                    startActivity(intent);
                 }
 
 

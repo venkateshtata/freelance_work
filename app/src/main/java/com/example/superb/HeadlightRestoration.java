@@ -12,11 +12,13 @@ import android.widget.Toast;
 public class HeadlightRestoration extends AppCompatActivity {
 
 
-    TextView head, description;
+    TextView head, description, price;
 
     Typeface myFont;
 
     Button back, add;
+
+    int service_charge = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,27 @@ public class HeadlightRestoration extends AppCompatActivity {
         back = (Button)findViewById(R.id.back);
         add = (Button)findViewById(R.id.add);
 
+        price = (TextView)findViewById(R.id.price);
+
+
+        GlobalClass global_for_car = (GlobalClass)getApplication();
+        String selected_car = global_for_car.getSelectedCar();
+
+        if(selected_car.contains("Premium")){
+            service_charge = 800;
+
+        }else if(selected_car.contains("MUV")){
+            service_charge = 600;
+        }else if(selected_car.contains("SUV")){
+            service_charge = 600;
+        }else if(selected_car.contains("Sedan")){
+            service_charge = 500;
+        }else if(selected_car.contains("Hatchback")){
+            service_charge = 500;
+        }
+
+        price.setText("Price : "+service_charge);
+
 
         myFont = Typeface.createFromAsset(this.getAssets(),"fonts/proxima.ttf");
 
@@ -42,6 +65,13 @@ public class HeadlightRestoration extends AppCompatActivity {
                 "-Removes the oxidation formed which clears the passage of light.\n" +
                 "-Makes night driving safer.");
 
+
+        GlobalClass global = (GlobalClass)getApplication();
+        if(global.getHeadlightrestoration()==1){
+
+            add.setText("remove");
+
+        }
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,12 +85,25 @@ public class HeadlightRestoration extends AppCompatActivity {
             public void onClick(View v) {
 
                 GlobalClass global = (GlobalClass)getApplication();
+                if(global.getHeadlightrestoration()==1){
 
-                global.setHeadlightrestoration(1);
 
-                Toast.makeText(HeadlightRestoration.this, "Headlight Restoration added !", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(HeadlightRestoration.this, selectService.class);
-                startActivity(intent);
+                    global.setHeadlightrestoration(0);
+                    global.subFromTotal(service_charge);
+
+                    Toast.makeText(HeadlightRestoration.this, "Headlight Restoration removed !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(HeadlightRestoration.this, selectService.class);
+                    startActivity(intent);
+                }else{
+
+
+                    global.setHeadlightrestoration(1);
+                    global.addToTotal(service_charge);
+
+                    Toast.makeText(HeadlightRestoration.this, "Headlight Restoration added !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(HeadlightRestoration.this, selectService.class);
+                    startActivity(intent);
+                }
 
 
             }

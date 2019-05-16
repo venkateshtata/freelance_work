@@ -11,11 +11,13 @@ import android.widget.Toast;
 
 public class InternalCleaning extends AppCompatActivity {
 
-    TextView head, description;
+    TextView head, description, price;
 
     Typeface myFont;
 
     Button back, add;
+
+    int service_charge = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,27 @@ public class InternalCleaning extends AppCompatActivity {
         back = (Button)findViewById(R.id.back);
         add = (Button)findViewById(R.id.add);
 
+        price = (TextView)findViewById(R.id.price);
+
+
+        GlobalClass global_for_car = (GlobalClass)getApplication();
+        String selected_car = global_for_car.getSelectedCar();
+
+        if(selected_car.contains("Premium")){
+            service_charge = 1900;
+
+        }else if(selected_car.contains("MUV")){
+            service_charge = 1700;
+        }else if(selected_car.contains("SUV")){
+            service_charge = 1700;
+        }else if(selected_car.contains("Sedan")){
+            service_charge = 1500;
+        }else if(selected_car.contains("Hatchback")){
+            service_charge = 1300;
+        }
+
+        price.setText("Price : "+service_charge);
+
 
         myFont = Typeface.createFromAsset(this.getAssets(),"fonts/proxima.ttf");
 
@@ -35,6 +58,13 @@ public class InternalCleaning extends AppCompatActivity {
         description.setTypeface(myFont);
 
         description.setText("Complete dry cleaning of a interior including seats (carpet/leather), roof, mats and boot, Dressings to all vinyl, plastic, rubber giving your car spotless, shiny, glossy interior.");
+
+        GlobalClass global = (GlobalClass)getApplication();
+        if(global.getInternalcleaning()==1){
+
+            add.setText("remove");
+
+        }
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,14 +78,27 @@ public class InternalCleaning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 GlobalClass global = (GlobalClass)getApplication();
+                if(global.getInternalcleaning()==1){
 
-                global.setInternalcleaning(1);
 
-                Toast.makeText(InternalCleaning.this, "Internal Cleaning added !", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(InternalCleaning.this, selectService.class);
-                startActivity(intent);
+                    global.setInternalcleaning(0);
+                    global.subFromTotal(service_charge);
 
+                    Toast.makeText(InternalCleaning.this, "Internal Cleaning removed !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(InternalCleaning.this, selectService.class);
+                    startActivity(intent);
+                }else{
+
+
+                    global.setInternalcleaning(1);
+                    global.addToTotal(service_charge);
+
+                    Toast.makeText(InternalCleaning.this, "Internal Cleaning added !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(InternalCleaning.this, selectService.class);
+                    startActivity(intent);
+                }
 
             }
         });
