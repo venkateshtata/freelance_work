@@ -45,7 +45,7 @@ public class selectModel extends AppCompatActivity {
         });
 
         initItems();
-        spinnerDailog = new SpinnerDialog(selectModel.this, items, "Select item");
+        spinnerDailog = new SpinnerDialog(selectModel.this, items, "Select Car Model");
         spinnerDailog.bindOnSpinerListener(new OnSpinerItemClick() {
             @Override
             public void onClick(String item, int position) {

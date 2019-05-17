@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#80C6FF"
     android:layout_height="match_parent"
     tools:context=".selectService">
 
@@ -48,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/basiccarwash"
+                android:background="#2962FF"
                 android:text="Basic Wash"
                 android:textColor="#fff"
                 android:id="@+id/basic_wash"
@@ -60,7 +59,8 @@
                 android:layout_margin="5dp"
                 android:text="premium Wash"
                 android:textColor="#fff"
-                android:background="@drawable/premiumwash"
+                android:background="#2962FF
+"
                 android:id="@+id/premium_wash"
                 />
 
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/paintprotection"
+                android:background="#2962FF"
                 android:text="Paint Protection Coating"
                 android:textColor="#fff" />
 
@@ -77,10 +77,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/internalcleaning"
+                android:background="#2962FF"
                 android:text="Internal Cleaning"
                 android:textColor="#fff"
-
                 android:id="@+id/internal_cleaning"/>
 
             <Button
@@ -89,7 +88,7 @@
                 android:layout_margin="5dp"
                 android:text="superb rubbing and glaze"
                 android:textColor="#fff"
-                android:background="@drawable/rubbingglaze"
+                android:background="#2962FF"
                 android:id="@+id/rubbing_glaze"/>
 
             <Button
@@ -98,7 +97,7 @@
                 android:layout_margin="5dp"
                 android:text="A.C Sanitization"
                 android:textColor="#fff"
-                android:background="@drawable/acsanitization"
+                android:background="#2962FF"
                 android:id="@+id/ac_sanitization"/>
 
             <Button
@@ -107,7 +106,7 @@
                 android:layout_margin="5dp"
                 android:text="engine coating"
                 android:textColor="#fff"
-                android:background="@drawable/enginecoating"
+                android:background="#2962FF"
                 android:id="@+id/engine_coating"/>
 
             <Button
@@ -116,7 +115,7 @@
                 android:layout_margin="5dp"
                 android:text="alloy wheel treatment"
                 android:textColor="#fff"
-                android:background="@drawable/alloywheel"
+                android:background="#2962FF"
                 android:id="@+id/alloy_wheel"/>
 
             <Button
@@ -125,7 +124,7 @@
                 android:layout_margin="5dp"
                 android:text="upholstery correction"
                 android:textColor="#fff"
-                android:background="@drawable/seattreatment"
+                android:background="#2962FF"
                 android:id="@+id/seat_treatment"/>
 
             <Button
@@ -134,7 +133,7 @@
                 android:layout_margin="5dp"
                 android:text="headlight restoration"
                 android:textColor="#fff"
-                android:background="@drawable/headlight"
+                android:background="#2962FF"
                 android:id="@+id/headlight_restoration"/>
 
         </LinearLayout>

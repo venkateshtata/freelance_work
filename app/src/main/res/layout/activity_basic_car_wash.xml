@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#304FFE"
+            android:background="@drawable/button_round"
             android:text="back"
             android:textColor="#fff"
             android:id="@+id/back"
@@ -70,7 +70,7 @@
             android:layout_weight="1"
             android:textColor="#fff"
             android:id="@+id/add"
-            android:background="#304FFE"
+            android:background="@drawable/button_round"
             android:layout_margin="5dp"
             android:text="add"/>
 

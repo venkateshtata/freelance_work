@@ -126,17 +126,15 @@
                     android:src="@drawable/date1"
                     android:layout_margin="5dp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/txt_date"
                     android:layout_toRightOf="@+id/date_icon"
                     android:layout_margin="5dp"
-                    android:textSize="25dp"
-                    android:textColor="#000"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_marginBottom="10dp"
                     android:layout_height="wrap_content"
-                    android:text="Set Date"
+                    android:hint="Date"
                     android:textColorHint="#000"/>
 
             </RelativeLayout>
@@ -152,17 +150,15 @@
                     android:src="@drawable/time1"
                     android:layout_margin="5dp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/txt_time"
                     android:layout_toRightOf="@+id/time_icon"
                     android:layout_margin="5dp"
-                    android:textSize="25dp"
-                    android:textColor="#000"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_marginBottom="10dp"
                     android:layout_height="wrap_content"
-                    android:text="Set Time"
+                    android:hint="Time"
                     android:textColorHint="#000"/>
 
             </RelativeLayout>
@@ -201,7 +197,7 @@
             android:layout_weight="1"
             android:textColor="#fff"
             android:id="@+id/btn_proceed"
-            android:background="@drawable/button_round_pink"
+            android:background="@drawable/button_round"
             android:layout_margin="5dp"
             android:text="proceed"/>
 

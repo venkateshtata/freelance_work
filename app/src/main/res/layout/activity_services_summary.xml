@@ -61,7 +61,7 @@
             android:layout_weight="1"
             android:textColor="#fff"
             android:id="@+id/btn_proceed"
-            android:background="@drawable/button_round_pink"
+            android:background="@drawable/button_round"
             android:layout_margin="5dp"
             android:text="confirm"/>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#FFFF00"
+    android:background="#fff"
     android:layout_height="match_parent"
     tools:context=".selectModel">
 
@@ -27,6 +27,7 @@
         android:gravity="center"
         android:layout_margin="10dp"
         android:text="Selected Vehicle :"
+        android:fontFamily="@assets/fonts/proxima.tff"
         android:layout_above="@id/txt_selectedCar"
         android:id="@+id/selected"
         android:textColor="#000" />
@@ -36,6 +37,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="#000"
+        android:textStyle="bold"
+        android:fontFamily="@assets/fonts/proxima.tff"
         android:layout_above="@+id/btn_search"
         android:layout_margin="10dp"
         android:id="@+id/txt_selectedCar"/>
@@ -46,6 +49,7 @@
         android:layout_margin="10dp"
         android:background="@drawable/button_round"
         android:textColor="#fff"
+        android:fontFamily="@assets/fonts/proxima.tff"
         android:text="SEARCH YOUR CAR"
         android:gravity="center"
         android:layout_above="@+id/btn_continue"
@@ -61,7 +65,7 @@
         android:gravity="center"
         android:textColor="#fff"
         android:layout_margin="10dp"
-        android:background="@drawable/button_round_pink"
+        android:background="@drawable/button_round"
         android:id="@+id/btn_continue"
         android:layout_gravity="center"/>
 

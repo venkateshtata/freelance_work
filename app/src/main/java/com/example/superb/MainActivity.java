@@ -9,23 +9,42 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_start;
+    Button btn_doorstep, btn_studio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_start = (Button)findViewById(R.id.btn_start);
+        btn_doorstep = (Button)findViewById(R.id.btn_doorstep);
+        btn_studio = (Button)findViewById(R.id.btn_studio);
 
-        btn_start.setOnClickListener(new View.OnClickListener() {
+        btn_doorstep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, getLocation.class);
+                GlobalClass global = (GlobalClass)getApplication();
+
+                global.setModel("Doorstep");
+
+                Intent intent = new Intent(MainActivity.this, selectModel.class);
                 startActivity(intent);
 
 
+
+            }
+        });
+
+        btn_studio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                GlobalClass global = (GlobalClass)getApplication();
+
+                global.setModel("Studio");
+
+                Intent intent = new Intent(MainActivity.this, selectModel.class);
+                startActivity(intent);
 
             }
         });

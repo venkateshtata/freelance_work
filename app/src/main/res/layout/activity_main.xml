@@ -5,26 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFF00"
+    android:background="#fff"
     tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
 
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:src="@drawable/superbcarwash_logo"
         android:id="@+id/logo"
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SELECT SERVICE TYPE :"
+        android:textSize="20dp"
+        android:id="@+id/txt"
+        android:fontFamily="@assets/fonts/proxima.tff"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/logo"
+        />
+
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GET STARTED !"
+        android:text="Doorstep service"
+        android:fontFamily="@assets/fonts/proxima.tff"
         android:textColor="#fff"
         android:layout_margin="10dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/txt"
         android:background="@drawable/button_round"
-        android:id="@+id/btn_start"/>
+        android:id="@+id/btn_doorstep"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="studio service"
+        android:fontFamily="@assets/fonts/proxima.tff"
+        android:textColor="#fff"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/btn_doorstep"
+        android:background="@drawable/button_round"
+        android:id="@+id/btn_studio"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 
 
 
