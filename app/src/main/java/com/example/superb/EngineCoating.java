@@ -78,6 +78,7 @@ public class EngineCoating extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EngineCoating.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -97,6 +98,7 @@ public class EngineCoating extends AppCompatActivity {
                     Toast.makeText(EngineCoating.this, "Engine Coating removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(EngineCoating.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -106,6 +108,7 @@ public class EngineCoating extends AppCompatActivity {
                     Toast.makeText(EngineCoating.this, "Engine Coating added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(EngineCoating.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
 

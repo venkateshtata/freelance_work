@@ -16,7 +16,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Selected Services :"
+        android:text="Selected Services"
+        android:textStyle="bold"
         android:layout_margin="10dp"
         android:layout_alignParentTop="true"
         android:gravity="center"
@@ -29,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/head"
+        android:padding="5dp"
         android:layout_margin="10dp"></ListView>
 
     <TextView
@@ -50,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="re-select"
+            android:text="ADD/REMOVE"
             android:textColor="#fff"
             android:id="@+id/btn_reselect"
             android:background="@drawable/button_round"

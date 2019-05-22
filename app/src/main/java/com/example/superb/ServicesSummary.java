@@ -38,6 +38,9 @@ public class ServicesSummary extends AppCompatActivity {
 
                 Intent intent = new Intent(ServicesSummary.this, UserDetails.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+
 
             }
         });
@@ -46,11 +49,12 @@ public class ServicesSummary extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                GlobalClass global = (GlobalClass)getApplication();
-                global.clearTotal();
-                global.clearAllServices();
+//                GlobalClass global = (GlobalClass)getApplication();
+//                global.clearTotal();
+//                global.clearAllServices();
                 Intent intent = new Intent(ServicesSummary.this, selectService.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 
 
             }

@@ -77,6 +77,7 @@ public class HeadlightRestoration extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HeadlightRestoration.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -94,6 +95,7 @@ public class HeadlightRestoration extends AppCompatActivity {
                     Toast.makeText(HeadlightRestoration.this, "Headlight Restoration removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(HeadlightRestoration.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -103,6 +105,7 @@ public class HeadlightRestoration extends AppCompatActivity {
                     Toast.makeText(HeadlightRestoration.this, "Headlight Restoration added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(HeadlightRestoration.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
 

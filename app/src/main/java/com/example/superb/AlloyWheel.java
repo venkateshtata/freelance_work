@@ -81,6 +81,7 @@ public class AlloyWheel extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AlloyWheel.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -98,6 +99,7 @@ public class AlloyWheel extends AppCompatActivity {
                     Toast.makeText(AlloyWheel.this, "Alloy Wheel Treatment removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(AlloyWheel.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -107,6 +109,7 @@ public class AlloyWheel extends AppCompatActivity {
                     Toast.makeText(AlloyWheel.this, "Alloy Wheel Treatment added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(AlloyWheel.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
 

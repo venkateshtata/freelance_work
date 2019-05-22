@@ -87,6 +87,8 @@ public class VerifyNumber extends AppCompatActivity {
                     Intent intent = new Intent(VerifyNumber.this, Submission.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
 
 
                 }else{

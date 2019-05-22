@@ -32,7 +32,8 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
 
     Button btn_back, btn_proceed;
 
-    String Str_Name, Str_Phone, Str_Email, Str_Address, Str_Date, Str_Time;
+    String Str_Name, Str_Phone, Str_Email, Str_Address, Str_Date = null, Str_Time = null, String_Date, String_Time;
+    TextView txt_Date, txt_Time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +47,13 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
         edt_email = (EditText)findViewById(R.id.edt_email);
         edt_address = (EditText)findViewById(R.id.edt_address);
 
-        txt_date = (TextView)findViewById(R.id.txt_date);
-        txt_time = (TextView)findViewById(R.id.txt_time);
+        txt_Date = (TextView) findViewById(R.id.txt_date);
+        txt_Time = (TextView) findViewById(R.id.txt_time);
 
         btn_proceed = (Button)findViewById(R.id.btn_proceed);
         btn_back = (Button) findViewById(R.id.btn_back);
+
+
 
 
         btn_back.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +65,8 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
 
                 Intent intent = new Intent(UserDetails.this, selectModel.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+                finish();
             }
         });
 
@@ -74,7 +79,10 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
                 Str_Email = edt_email.getText().toString().trim();
                 Str_Address = edt_address.getText().toString().trim();
 
-                if(Str_Name.isEmpty() == true ||Str_Phone.isEmpty() == true ||Str_Email.isEmpty() == true ||Str_Address.isEmpty() == true ||Str_Date.isEmpty() == true ||Str_Time.isEmpty() == true){
+
+
+
+                if(Str_Name.isEmpty() == true ||Str_Phone.isEmpty() == true ||Str_Email.isEmpty() == true ||Str_Address.isEmpty() == true ||Str_Date == null ||Str_Time == null){
                     Toast.makeText(UserDetails.this, "Please fill all the details before proceeding", Toast.LENGTH_SHORT).show();
                 }else {
 
@@ -95,6 +103,7 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
                     intent.putExtra("phonenumber", phoneNumber);
                     Toast.makeText(UserDetails.this, "number entered : "+phoneNumber, Toast.LENGTH_SHORT).show();
                     startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
 
 
@@ -109,13 +118,13 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
                 month = month+1;
 
                 String Date = "Date: " + dayOfMonth + "/" + month + "/" + year ;
-                txt_date.setText(Date);
+                txt_Date.setText(Date);
 
                 Str_Date = Date;
             }
         };
 
-        txt_date.setOnClickListener(new View.OnClickListener() {
+        txt_Date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Calendar cal = Calendar.getInstance();
@@ -133,7 +142,7 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
             }
         });
 
-        txt_time.setOnClickListener(new View.OnClickListener() {
+        txt_Time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment timePicker = new TimePickerFragment();
@@ -145,7 +154,7 @@ public class UserDetails extends AppCompatActivity implements TimePickerDialog.O
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         String time = hourOfDay + ":" + minute;
-        txt_time.setText(time);
+        txt_Time.setText(time);
         Str_Time = time;
     }
 }

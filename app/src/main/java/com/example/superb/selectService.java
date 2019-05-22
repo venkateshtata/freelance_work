@@ -78,6 +78,8 @@ public class selectService extends AppCompatActivity {
                 else{
                     Intent intent = new Intent(selectService.this, ServicesSummary.class);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
                 }
 
 
@@ -90,6 +92,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, BasicCarWash.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -98,6 +101,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, PremiumCarWash.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -107,6 +111,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, InternalCleaning.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -116,6 +121,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, PaintProtection.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -124,6 +130,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, RubbingGlaze.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -132,6 +139,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, AcSanitization.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -140,6 +148,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, EngineCoating.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -148,6 +157,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, AlloyWheel.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -156,6 +166,7 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, UpholsteryCorrection.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -164,10 +175,16 @@ public class selectService extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(selectService.this, HeadlightRestoration.class);
                 startActivity(intent);
+                finish();
             }
         });
 
 
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }

@@ -78,6 +78,7 @@ public class AcSanitization extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AcSanitization.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -95,6 +96,7 @@ public class AcSanitization extends AppCompatActivity {
                     Toast.makeText(AcSanitization.this, "A.C Sanitization removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(AcSanitization.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -104,6 +106,7 @@ public class AcSanitization extends AppCompatActivity {
                     Toast.makeText(AcSanitization.this, "A.C Sanitization added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(AcSanitization.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
 

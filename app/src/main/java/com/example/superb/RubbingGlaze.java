@@ -73,6 +73,7 @@ public class RubbingGlaze extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(RubbingGlaze.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -90,6 +91,7 @@ public class RubbingGlaze extends AppCompatActivity {
                     Toast.makeText(RubbingGlaze.this, "Superb Rubbing and Glaze removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RubbingGlaze.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -99,6 +101,7 @@ public class RubbingGlaze extends AppCompatActivity {
                     Toast.makeText(RubbingGlaze.this, "Superb Rubbing and Glaze added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RubbingGlaze.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
 

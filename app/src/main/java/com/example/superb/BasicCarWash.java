@@ -75,6 +75,7 @@ public class BasicCarWash extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BasicCarWash.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -92,6 +93,7 @@ public class BasicCarWash extends AppCompatActivity {
                     Toast.makeText(BasicCarWash.this, "Basic Car Wash removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(BasicCarWash.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -101,6 +103,7 @@ public class BasicCarWash extends AppCompatActivity {
                     Toast.makeText(BasicCarWash.this, "Basic Car Wash added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(BasicCarWash.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
 

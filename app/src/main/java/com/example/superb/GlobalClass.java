@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class GlobalClass extends Application {
 
-    public int basicwash;
+    private int basicwash;
     private int premiumwash;
     private int internalcleaning;
     private int paintprotection;
@@ -122,6 +122,7 @@ public class GlobalClass extends Application {
         this.alloywheel = 0;
         this.seattreatment = 0;
         this.headlightrestoration = 0;
+        this.list.clear();
     }
 
 

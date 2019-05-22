@@ -71,6 +71,7 @@ public class InternalCleaning extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(InternalCleaning.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -89,6 +90,7 @@ public class InternalCleaning extends AppCompatActivity {
                     Toast.makeText(InternalCleaning.this, "Internal Cleaning removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(InternalCleaning.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -98,6 +100,7 @@ public class InternalCleaning extends AppCompatActivity {
                     Toast.makeText(InternalCleaning.this, "Internal Cleaning added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(InternalCleaning.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
             }

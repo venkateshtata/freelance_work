@@ -63,6 +63,7 @@ public class Submission extends AppCompatActivity {
                 global.clearTotal();
                 Intent intent = new Intent(Submission.this, selectModel.class);
                 startActivity(intent);
+                finish();
             }
         });
 

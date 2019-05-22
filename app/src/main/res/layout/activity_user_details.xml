@@ -82,7 +82,7 @@
                     android:id="@+id/edt_email"
                     android:layout_toRightOf="@+id/email_icon"
                     android:layout_margin="5dp"
-                    android:inputType="text"
+                    android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_marginBottom="10dp"
                     android:layout_height="wrap_content"
@@ -126,16 +126,15 @@
                     android:src="@drawable/date1"
                     android:layout_margin="5dp"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/txt_date"
                     android:layout_toRightOf="@+id/date_icon"
-                    android:layout_margin="5dp"
-                    android:inputType="text"
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_marginBottom="10dp"
                     android:layout_height="wrap_content"
-                    android:hint="Date"
-                    android:textColorHint="#000"/>
+                    android:text="Set Date"
+                    android:textColor="#000"/>
 
             </RelativeLayout>
 
@@ -150,16 +149,16 @@
                     android:src="@drawable/time1"
                     android:layout_margin="5dp"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/txt_time"
                     android:layout_toRightOf="@+id/time_icon"
-                    android:layout_margin="5dp"
+                    android:layout_margin="10dp"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_marginBottom="10dp"
                     android:layout_height="wrap_content"
-                    android:hint="Time"
-                    android:textColorHint="#000"/>
+                    android:text="Set Time"
+                    android:textColor="#000" />
 
             </RelativeLayout>
 

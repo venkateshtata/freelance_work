@@ -74,6 +74,7 @@ public class PaintProtection extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(PaintProtection.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -82,7 +83,7 @@ public class PaintProtection extends AppCompatActivity {
             public void onClick(View v) {
 
                 GlobalClass global = (GlobalClass)getApplication();
-                if(global.getInternalcleaning()==1){
+                if(global.getPaintprotection()==1){
 
 
                     global.setPaintprotection(0);
@@ -91,6 +92,7 @@ public class PaintProtection extends AppCompatActivity {
                     Toast.makeText(PaintProtection.this, "Paint Protection removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(PaintProtection.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -100,6 +102,7 @@ public class PaintProtection extends AppCompatActivity {
                     Toast.makeText(PaintProtection.this, "Paint Protecton added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(PaintProtection.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
 

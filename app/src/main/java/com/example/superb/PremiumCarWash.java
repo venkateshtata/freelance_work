@@ -71,6 +71,7 @@ public class PremiumCarWash extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(PremiumCarWash.this, selectService.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -88,6 +89,7 @@ public class PremiumCarWash extends AppCompatActivity {
                     Toast.makeText(PremiumCarWash.this, "Premium Car Wash removed !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(PremiumCarWash.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }else{
 
 
@@ -98,6 +100,7 @@ public class PremiumCarWash extends AppCompatActivity {
                     Toast.makeText(PremiumCarWash.this, "Premium Car Wash added !", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(PremiumCarWash.this, selectService.class);
                     startActivity(intent);
+                    finish();
                 }
 
 
