@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superrr.superb;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.superrr.superb.R;
 
 public class AlloyWheel extends AppCompatActivity {
 
@@ -39,19 +41,41 @@ public class AlloyWheel extends AppCompatActivity {
         GlobalClass global_for_car = (GlobalClass)getApplication();
         String selected_car = global_for_car.getSelectedCar();
 
-        if(selected_car.contains("Premium")){
-            service_charge = 1250;
 
-        }else if(selected_car.contains("MUV")){
-            service_charge = 800;
-        }else if(selected_car.contains("SUV")){
-            service_charge = 800;
-        }else if(selected_car.contains("Sedan")){
-            service_charge = 800;
-        }else if(selected_car.contains("Hatchback")){
-            service_charge = 700;
+        String mod = global_for_car.getModel();
+
+        if(mod == "Doorstep") {
+
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 1250;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 800;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 800;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 800;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 700;
+            }
+        }else {
+
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 1250;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 800;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 800;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 800;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 700;
+            }
+
         }
-
         price.setText("Price : "+service_charge);
 
 

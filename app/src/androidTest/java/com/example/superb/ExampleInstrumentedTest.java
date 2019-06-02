@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superr.superb;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.superb", appContext.getPackageName());
+        assertEquals("com.superr.superb", appContext.getPackageName());
     }
 }

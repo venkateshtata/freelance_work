@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superrr.superb;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -37,20 +37,39 @@ public class PaintProtection extends AppCompatActivity {
 
         GlobalClass global_for_car = (GlobalClass)getApplication();
         String selected_car = global_for_car.getSelectedCar();
+        String mod = global_for_car.getModel();
 
-        if(selected_car.contains("Premium")){
-            service_charge = 4000;
+        if(mod == "Doorstep") {
 
-        }else if(selected_car.contains("MUV")){
-            service_charge = 3600;
-        }else if(selected_car.contains("SUV")){
-            service_charge = 3600;
-        }else if(selected_car.contains("Sedan")){
-            service_charge = 3300;
-        }else if(selected_car.contains("Hatchback")){
-            service_charge = 3000;
+            if (selected_car.contains("Premium")) {
+                service_charge = 4000;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 3600;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 3600;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 3300;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 3000;
+            }
+        }else  {
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 3500;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 3200;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 2800;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 2800;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 2500;
+            }
+
+
         }
-
         price.setText("Price : "+service_charge);
 
 

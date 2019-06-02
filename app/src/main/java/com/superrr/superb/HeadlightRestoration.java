@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superrr.superb;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -38,19 +38,39 @@ public class HeadlightRestoration extends AppCompatActivity {
         GlobalClass global_for_car = (GlobalClass)getApplication();
         String selected_car = global_for_car.getSelectedCar();
 
-        if(selected_car.contains("Premium")){
-            service_charge = 800;
+        String mod = global_for_car.getModel();
 
-        }else if(selected_car.contains("MUV")){
-            service_charge = 600;
-        }else if(selected_car.contains("SUV")){
-            service_charge = 600;
-        }else if(selected_car.contains("Sedan")){
-            service_charge = 500;
-        }else if(selected_car.contains("Hatchback")){
-            service_charge = 500;
+        if(mod == "Doorstep") {
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 800;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 600;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 600;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 500;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 500;
+            }
+
+        } else{
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 800;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 600;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 600;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 500;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 500;
+            }
+
         }
-
         price.setText("Price : "+service_charge);
 
 

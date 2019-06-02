@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superrr.superb;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

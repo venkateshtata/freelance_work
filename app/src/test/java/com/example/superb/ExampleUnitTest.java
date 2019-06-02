@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superr.superb;
 
 import org.junit.Test;
 

@@ -87,6 +87,112 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150748883719:android:0d9d1045ac2446d3",
+        "android_client_info": {
+          "package_name": "com.superr.superb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150748883719-en3ej0epd5sii0fbni2c9gg2g02s19gn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.superr.superb",
+            "certificate_hash": "e4ebcced1be8027ea1833be3bc1343924b321b1f"
+          }
+        },
+        {
+          "client_id": "150748883719-vj9v4pv4gkgdm2h1laqp6htmbcu549je.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.superr.superb",
+            "certificate_hash": "61c8d60efd9baf1887cad46f5cb8191a51912ebf"
+          }
+        },
+        {
+          "client_id": "150748883719-j1b1maiq8iab3e0qdibkvg0d7rbiq73e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.superr.superb",
+            "certificate_hash": "e8791e84ab1c905bf0f3a38396fbc83cb737ad5d"
+          }
+        },
+        {
+          "client_id": "150748883719-9mie9our09021jsqt6qt11oaamijqkgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLZTRx2qtJnsiErGrp0hcC1nQcgXGfpb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150748883719-9mie9our09021jsqt6qt11oaamijqkgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150748883719:android:d85cf78abfd376bc",
+        "android_client_info": {
+          "package_name": "com.superrr.superb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150748883719-cgbpv8n8d9k2i0rt0bc1i0mpahoumagh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.superrr.superb",
+            "certificate_hash": "e4ebcced1be8027ea1833be3bc1343924b321b1f"
+          }
+        },
+        {
+          "client_id": "150748883719-c16ft37o36lb0uuevj28m161g4dkns7j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.superrr.superb",
+            "certificate_hash": "61c8d60efd9baf1887cad46f5cb8191a51912ebf"
+          }
+        },
+        {
+          "client_id": "150748883719-ah065v8ktls6m3pojqmn2qng1mvv692t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.superrr.superb",
+            "certificate_hash": "e8791e84ab1c905bf0f3a38396fbc83cb737ad5d"
+          }
+        },
+        {
+          "client_id": "150748883719-9mie9our09021jsqt6qt11oaamijqkgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLZTRx2qtJnsiErGrp0hcC1nQcgXGfpb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150748883719-9mie9our09021jsqt6qt11oaamijqkgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

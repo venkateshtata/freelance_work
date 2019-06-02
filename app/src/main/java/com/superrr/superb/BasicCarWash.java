@@ -1,5 +1,4 @@
-package com.example.superb;
-
+package com.superrr.superb;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.superrr.superb.R;
 
 public class BasicCarWash extends AppCompatActivity {
 
@@ -32,19 +33,40 @@ public class BasicCarWash extends AppCompatActivity {
 
 
         GlobalClass global_for_car = (GlobalClass)getApplication();
+
         String selected_car = global_for_car.getSelectedCar();
 
-        if(selected_car.contains("Premium")){
-            service_charge = 800;
+        String mod = global_for_car.getModel();
 
-        }else if(selected_car.contains("MUV")){
-            service_charge = 700;
-        }else if(selected_car.contains("SUV")){
-            service_charge = 700;
-        }else if(selected_car.contains("Sedan")){
-            service_charge = 650;
-        }else if(selected_car.contains("Hatchback")){
-            service_charge = 550;
+        if(mod == "Doorstep") {
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 800;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 700;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 700;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 650;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 550;
+            }
+        }else{
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 800;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 700;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 700;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 600;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 500;
+            }
+
         }
 
         price.setText("Price : "+service_charge);
@@ -60,7 +82,7 @@ public class BasicCarWash extends AppCompatActivity {
         head.setTypeface(myFont);
         description.setTypeface(myFont);
 
-        description.setText("Complete vacuuming of cars incl. seats and boot + Washing and cleaning of foot mats + Body Shampooing and washing including door frames + Tyre arches cleaning + Underbody wash + Engine hot water wash and dressing + Side doors cleaning + Dash board cleaning and polishing + tires and alloy wheels treatment + Car perfume spray.\n");
+        description.setText("Complete vacuuming of cars incl. seats and boot + Washing and cleaning of foot mats + Body Shampooing and pre-wash + Door frames cleaning & Polishing + Tyre arches cleaning + Underbody wash + Side doors cleaning + Dash board cleaning and polishing + tire wash and polishing + Car perfume spray.\n");
 
         GlobalClass global = (GlobalClass)getApplication();
         if(global.getBasicwash()==1){

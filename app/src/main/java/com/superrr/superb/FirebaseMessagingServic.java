@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superrr.superb;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

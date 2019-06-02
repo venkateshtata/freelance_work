@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superrr.superb;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -37,20 +37,40 @@ public class RubbingGlaze extends AppCompatActivity {
 
         GlobalClass global_for_car = (GlobalClass)getApplication();
         String selected_car = global_for_car.getSelectedCar();
+        String mod = global_for_car.getModel();
 
-        if(selected_car.contains("Premium")){
-            service_charge = 2800;
+        if(mod == "Doorstep") {
 
-        }else if(selected_car.contains("MUV")){
-            service_charge = 2400;
-        }else if(selected_car.contains("SUV")){
-            service_charge = 2400;
-        }else if(selected_car.contains("Sedan")){
-            service_charge = 2100;
-        }else if(selected_car.contains("Hatchback")){
-            service_charge = 1800;
+            if (selected_car.contains("Premium")) {
+                service_charge = 2800;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 2400;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 2400;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 2100;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 1800;
+            }
+
+        }else{
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 2200;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 2000;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 1700;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 1700;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 1400;
+            }
+
+
         }
-
         price.setText("Price : "+service_charge);
 
 

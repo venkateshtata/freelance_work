@@ -1,4 +1,4 @@
-package com.example.superb;
+package com.superrr.superb;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -36,17 +36,41 @@ public class PremiumCarWash extends AppCompatActivity {
         GlobalClass global_for_car = (GlobalClass)getApplication();
         String selected_car = global_for_car.getSelectedCar();
 
-        if(selected_car.contains("Premium")){
-            service_charge = 2000;
+        String mod = global_for_car.getModel();
 
-        }else if(selected_car.contains("MUV")){
-            service_charge = 2000;
-        }else if(selected_car.contains("SUV")){
-            service_charge = 2000;
-        }else if(selected_car.contains("Sedan")){
-            service_charge = 1800;
-        }else if(selected_car.contains("Hatchback")){
-            service_charge = 1600;
+        if(mod == "Doorstep") {
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 2200;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 2000;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 2000;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 1800;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 1600;
+            }
+
+        } else{
+
+
+            if (selected_car.contains("Premium")) {
+                service_charge = 2200;
+
+            } else if (selected_car.contains("MUV")) {
+                service_charge = 2000;
+            } else if (selected_car.contains("SUV")) {
+                service_charge = 2000;
+            } else if (selected_car.contains("Sedan")) {
+                service_charge = 1600;
+            } else if (selected_car.contains("Hatchback")) {
+                service_charge = 1400;
+            }
+
+
+
         }
 
         price.setText("Price : "+service_charge);
